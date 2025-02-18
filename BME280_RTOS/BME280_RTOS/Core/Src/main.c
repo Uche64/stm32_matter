@@ -22,7 +22,10 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
+#include "bme280.h"  // Include the new BMP280 header file
 #include <stdio.h>
+#include <stdint.h>
+#include <string.h>
 
 /* USER CODE END Includes */
 
@@ -33,6 +36,56 @@
 
 /* Private define ------------------------------------------------------------*/
 /* USER CODE BEGIN PD */
+//Registers store the temperature value (MSB, LSB, XLSB) - Data registers, read only.
+//Without filter, resolution depends on osrs_t else it is always 20 bits
+#define temp_xlsb 0xFC //Contains the XLSB part ut[3:0] of the raw temperature measurement output data, depends on pressure resolution
+#define temp_lsb 0xFB //Contains the LSB part ut[11:4] of the raw temperature measurement output data
+#define temp_msb 0xFA //Contains the MSB part ut[19:12] of the raw temperature measurement output data
+
+
+//Without filter, resolution depends on osrs_p else it is always 20 bits
+#define press_xslb 0xF9 //Contains the XLSB part up[3:0] of the raw pressure measurement output data, depends on temperature resolution
+#define press_lsb 0xF8 //Contains the LSB part up[11:4] of the raw pressure measurement output data
+#define press_msb 0xF7 //Contains the MSB part up[19:12] of the raw pressure measurement output data
+
+//#define hum_xslb 0xF9
+#define hum_lsb 0xFE //Contains the LSB part uh[7:0] of the raw humidity measurement output data
+#define hum_msb 0xFD //Contains the MSB part uh[15:8] of the raw humidity measurement output data
+
+#define config 0xF5 //Sets the rate, filter and interface options of the device, read/write except in bit1 does not change (reserved)
+#define ctrl_meas 0xF4  //Sets the pressure and temperature data acquisition options on the device, read/write
+
+#define status 0xF3 //Contains two bits that indicate status of the device, read only
+#define reset 0xE0 //Contains soft reset word reset[7:0], write only
+#define id 0xD0 //Chip identification number chip_id[0x60], read only
+
+//Calibration data registers (read only) which store the factory calibration data for calculating the final value of pressure and temperature.
+#define cal25 0xA1
+#define cal24 0xA0
+#define cal23 0x9F
+#define cal22 0x9E
+#define cal21 0x9D
+#define cal20 0x9C
+#define cal19 0x9B
+#define cal18 0x9A
+#define cal17 0x99
+#define cal16 0x98
+#define cal15 0x97
+#define cal14 0x96
+#define cal13 0x95
+#define cal12 0x94
+#define cal11 0x93
+#define cal10 0x92
+#define cal09 0x91
+#define cal08 0x90
+#define cal07 0x8F
+#define cal06 0x8E
+#define cal05 0x8D
+#define cal04 0x8C
+#define cal03 0x8B
+#define cal02 0x8A
+#define cal01 0x89
+#define cal00 0x88
 
 /* USER CODE END PD */
 
@@ -51,21 +104,21 @@ osThreadId_t TemperatureHandle;
 const osThreadAttr_t Temperature_attributes = {
   .name = "Temperature",
   .priority = (osPriority_t) osPriorityNormal,
-  .stack_size = 128 * 4
+  .stack_size = 256 * 4
 };
 /* Definitions for Pressure */
 osThreadId_t PressureHandle;
 const osThreadAttr_t Pressure_attributes = {
   .name = "Pressure",
   .priority = (osPriority_t) osPriorityBelowNormal,
-  .stack_size = 128 * 4
+  .stack_size = 256 * 4
 };
 /* Definitions for Humidity */
 osThreadId_t HumidityHandle;
 const osThreadAttr_t Humidity_attributes = {
   .name = "Humidity",
   .priority = (osPriority_t) osPriorityLow,
-  .stack_size = 128 * 4
+  .stack_size = 256 * 4
 };
 /* USER CODE BEGIN PV */
 
@@ -126,6 +179,17 @@ int main(void)
   MX_USART1_UART_Init();
   /* USER CODE BEGIN 2 */
 
+  uint8_t chipID = 0;
+
+  //Writes configuration values to the ctrl_meas register, setting the measurement mode
+  uint8_t BMP280_Config[2]={0xB3,0xA0};
+  HAL_I2C_Mem_Write(&hi2c1, DEVICE_ADDRESS_L,ctrl_meas,1,BMP280_Config,2,0x10000);
+
+  //uint8_t temp_data[3], press_data[3], hum_data[2];
+
+  /* Read Calibration Data */
+  read_calibration_data(&hi2c1);
+
   /* USER CODE END 2 */
 
   /* Init scheduler */
@@ -177,6 +241,7 @@ int main(void)
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
+	//HAL_Delay(1000);  // Update data every 1 second
   }
   /* USER CODE END 3 */
 }
@@ -385,10 +450,30 @@ void StartTemperature(void *argument)
 {
   /* USER CODE BEGIN 5 */
   /* Infinite loop */
-  for(;;)
-  {
-	printf("Temperature: Task 1 \n");
-    osDelay(1000);
+  while(1){
+	  uint8_t temp_data[3];
+	  unsigned char temp_reg = 0xFA;
+
+
+      // Read Raw temperature
+      HAL_I2C_Master_Transmit(&hi2c1, DEVICE_ADDRESS_L, &temp_reg, 1, 500);
+      HAL_I2C_Master_Receive(&hi2c1, DEVICE_ADDRESS_L | 0x01, temp_data, 3, 500);
+
+      // Convert raw temperature data (20-bit value) + Compensate
+      int32_t raw_temp = ((int32_t)temp_data[0] << 12) | ((int32_t)temp_data[1] << 4) | (temp_data[2] >> 4);
+      float temp = compensate_temperature(raw_temp);
+
+      // Print to UART
+      //char buffer[50];
+      //sprintf(buffer, "Temperature: %.2f \xB0C \r\n", temp);
+      //HAL_UART_Transmit(&huart1, (uint8_t *)buffer, strlen(buffer), 100);
+
+      //Print to SWV
+      printf("Task 1 \n");
+      printf("Temperature: %.2f C\r\n", temp);
+      fflush(stdout);
+
+      osDelay(1000);
   }
   /* USER CODE END 5 */
 }
@@ -404,9 +489,28 @@ void StartPressure(void *argument)
 {
   /* USER CODE BEGIN StartPressure */
   /* Infinite loop */
-  for(;;)
-  {
-	  printf("Pressure: Task 2 \n");
+  while(1){
+	  uint8_t press_data[3];
+	  unsigned char press_reg = 0xF7;
+
+	  // Read Raw Pressure
+	  HAL_I2C_Master_Transmit(&hi2c1, DEVICE_ADDRESS_L, &press_reg, 1, 500);
+	  HAL_I2C_Master_Receive(&hi2c1, DEVICE_ADDRESS_L | 0x01, press_data, 3, 500);
+
+	  // Convert raw pressure data (20-bit value)+ Compensate
+	  int32_t raw_press = ((int32_t)press_data[0] << 12) | ((int32_t)press_data[1] << 4) | (press_data[2] >> 4);
+	  float pressure = compensate_pressure(raw_press);
+
+	  // Print to UART
+	  //char buffer[50];
+	  //sprintf(buffer, "Pressure: %.2f hPa\r\n", pressure);
+	  //HAL_UART_Transmit(&huart1, (uint8_t *)buffer, strlen(buffer), 100);
+
+	  //Print to SWV
+	  printf("Task 2 \n");
+	  printf("Pressure: %.2f hPa\r\n", pressure);
+	  fflush(stdout);
+
 	  osDelay(1000);
   }
   /* USER CODE END StartPressure */
@@ -423,9 +527,28 @@ void StartHumidity(void *argument)
 {
   /* USER CODE BEGIN StartHumidity */
   /* Infinite loop */
-  for(;;)
-  {
-	  printf("Humidity: Task 3 \n");
+  while(1){
+	  uint8_t hum_data[2];
+	  unsigned char hum_reg = 0xFD;
+
+	  // Read Raw Humidity
+	  HAL_I2C_Master_Transmit(&hi2c1, DEVICE_ADDRESS_L, &hum_reg, 1, 500);
+	  HAL_I2C_Master_Receive(&hi2c1, DEVICE_ADDRESS_L | 0x01, hum_data, 2, 500);
+
+	  // Convert raw pressure data (20-bit value)+ Compensate
+	  int32_t raw_hum = ((int32_t)hum_data[0] << 8) | hum_data[1];
+	  float humidity = compensate_humidity(raw_hum);
+
+	  // Print to UART
+	  //char buffer[50];
+	  //sprintf(buffer, "Humidity: %.2f %%\r\n", humidity);
+	  //HAL_UART_Transmit(&huart1, (uint8_t *)buffer, strlen(buffer), 100);
+
+	  //Print to SWV
+	  printf("Task 3 \n");
+	  printf("Humidity: %.2f %%\r\n", humidity);
+	  fflush(stdout);
+
 	  osDelay(1000);
   }
   /* USER CODE END StartHumidity */
