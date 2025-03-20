@@ -1,0 +1,8 @@
+../Middlewares/Third_Party/mbedtls/programs/ssl/ssl_test_common_source.c:50:6:eap_tls_key_derivation	8	static
+../Middlewares/Third_Party/mbedtls/programs/ssl/ssl_test_common_source.c:74:6:nss_keylog_export	232	static
+../Middlewares/Third_Party/mbedtls/programs/ssl/ssl_test_common_source.c:169:5:ssl_check_record	24	static
+../Middlewares/Third_Party/mbedtls/programs/ssl/ssl_test_common_source.c:234:5:recv_cb	24	static
+../Middlewares/Third_Party/mbedtls/programs/ssl/ssl_test_common_source.c:262:5:recv_timeout_cb	16	static
+../Middlewares/Third_Party/mbedtls/programs/ssl/ssl_test_common_source.c:287:5:send_cb	4	static
+../Middlewares/Third_Party/mbedtls/programs/ssl/ssl_test_common_source.c:359:5:x509_crt_verify_info	0	static
+../Middlewares/Third_Party/mbedtls/programs/ssl/ssl_test_common_source.c:392:6:mbedtls_print_supported_sig_algs	8	static

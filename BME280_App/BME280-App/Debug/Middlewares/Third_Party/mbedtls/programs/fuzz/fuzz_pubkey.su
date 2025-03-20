@@ -1,0 +1,1 @@
+../Middlewares/Third_Party/mbedtls/programs/fuzz/fuzz_pubkey.c:5:5:LLVMFuzzerTestOneInput	32	static

@@ -1,0 +1,8 @@
+../Middlewares/Third_Party/mbedtls/library/memory_buffer_alloc.c:113:12:verify_header	0	static
+../Middlewares/Third_Party/mbedtls/library/memory_buffer_alloc.c:153:12:verify_chain	16	static
+../Middlewares/Third_Party/mbedtls/library/memory_buffer_alloc.c:537:14:buffer_alloc_calloc_mutexed	24	static
+../Middlewares/Third_Party/mbedtls/library/memory_buffer_alloc.c:550:13:buffer_alloc_free_mutexed	24	static
+../Middlewares/Third_Party/mbedtls/library/memory_buffer_alloc.c:481:6:mbedtls_memory_buffer_set_verify	0	static
+../Middlewares/Third_Party/mbedtls/library/memory_buffer_alloc.c:486:5:mbedtls_memory_buffer_alloc_verify	0	static
+../Middlewares/Third_Party/mbedtls/library/memory_buffer_alloc.c:562:6:mbedtls_memory_buffer_alloc_init	16	static
+../Middlewares/Third_Party/mbedtls/library/memory_buffer_alloc.c:596:6:mbedtls_memory_buffer_alloc_free	8	static

@@ -1,0 +1,2 @@
+../Middlewares/Third_Party/nlassert/tests/nlassert-static-test.c:50:13:TestStatic	0	static
+../Middlewares/Third_Party/nlassert/tests/nlassert-static-test.c:62:5:main	56	static

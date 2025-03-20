@@ -1,0 +1,5 @@
+../Middlewares/Third_Party/mbedtls/library/x509_crl.c:594:5:mbedtls_x509_crl_info	64	static
+../Middlewares/Third_Party/mbedtls/library/x509_crl.c:669:6:mbedtls_x509_crl_init	0	static
+../Middlewares/Third_Party/mbedtls/library/x509_crl.c:677:6:mbedtls_x509_crl_free	16	static
+../Middlewares/Third_Party/mbedtls/library/x509_crl.c:283:5:mbedtls_x509_crl_parse_der	96	static
+../Middlewares/Third_Party/mbedtls/library/x509_crl.c:505:5:mbedtls_x509_crl_parse	56	static

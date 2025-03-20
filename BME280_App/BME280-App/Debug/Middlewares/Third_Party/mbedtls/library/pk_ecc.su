@@ -1,0 +1,5 @@
+../Middlewares/Third_Party/mbedtls/library/pk_internal.h:60:42:mbedtls_pk_ec_ro	16	static
+../Middlewares/Third_Party/mbedtls/library/pk_ecc.c:17:5:mbedtls_pk_ecc_set_group	16	static
+../Middlewares/Third_Party/mbedtls/library/pk_ecc.c:48:5:mbedtls_pk_ecc_set_key	16	static
+../Middlewares/Third_Party/mbedtls/library/pk_ecc.c:84:5:mbedtls_pk_ecc_set_pubkey_from_prv	16	static
+../Middlewares/Third_Party/mbedtls/library/pk_ecc.c:204:5:mbedtls_pk_ecc_set_pubkey	16	static

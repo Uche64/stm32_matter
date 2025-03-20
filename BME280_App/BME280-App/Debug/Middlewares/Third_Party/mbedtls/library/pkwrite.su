@@ -1,0 +1,8 @@
+../Middlewares/Third_Party/mbedtls/include/mbedtls/pk.h:1052:36:mbedtls_pk_ec	16	static
+../Middlewares/Third_Party/mbedtls/library/pkwrite.c:115:12:pk_write_ec_pubkey	104	static
+../Middlewares/Third_Party/mbedtls/library/pkwrite.c:222:12:pk_write_ec_param	24	static
+../Middlewares/Third_Party/mbedtls/library/pkwrite.c:411:5:mbedtls_pk_write_pubkey	16	static
+../Middlewares/Third_Party/mbedtls/library/pkwrite.c:437:5:mbedtls_pk_write_pubkey_der	64	static
+../Middlewares/Third_Party/mbedtls/library/pkwrite.c:504:5:mbedtls_pk_write_key_der	88	static
+../Middlewares/Third_Party/mbedtls/library/pkwrite.c:544:5:mbedtls_pk_write_pubkey_pem	48	static
+../Middlewares/Third_Party/mbedtls/library/pkwrite.c:571:5:mbedtls_pk_write_key_pem	48	static

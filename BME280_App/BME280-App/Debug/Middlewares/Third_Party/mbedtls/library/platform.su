@@ -1,0 +1,5 @@
+../Middlewares/Third_Party/mbedtls/library/platform.c:47:7:mbedtls_calloc	0	static
+../Middlewares/Third_Party/mbedtls/library/platform.c:52:6:mbedtls_free	0	static
+../Middlewares/Third_Party/mbedtls/library/platform.c:57:5:mbedtls_platform_set_calloc_free	0	static
+../Middlewares/Third_Party/mbedtls/library/platform.c:386:5:mbedtls_platform_setup	0	static
+../Middlewares/Third_Party/mbedtls/library/platform.c:396:6:mbedtls_platform_teardown	0	static

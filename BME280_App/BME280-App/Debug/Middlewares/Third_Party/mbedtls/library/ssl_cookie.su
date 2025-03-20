@@ -1,0 +1,7 @@
+../Middlewares/Third_Party/mbedtls/library/ssl_cookie.c:159:12:ssl_cookie_hmac	56	static
+../Middlewares/Third_Party/mbedtls/library/ssl_cookie.c:61:6:mbedtls_ssl_cookie_init	8	static
+../Middlewares/Third_Party/mbedtls/library/ssl_cookie.c:80:6:mbedtls_ssl_cookie_set_timeout	0	static
+../Middlewares/Third_Party/mbedtls/library/ssl_cookie.c:85:6:mbedtls_ssl_cookie_free	8	static
+../Middlewares/Third_Party/mbedtls/library/ssl_cookie.c:100:5:mbedtls_ssl_cookie_setup	48	static
+../Middlewares/Third_Party/mbedtls/library/ssl_cookie.c:185:5:mbedtls_ssl_cookie_write	32	static
+../Middlewares/Third_Party/mbedtls/library/ssl_cookie.c:274:5:mbedtls_ssl_cookie_check	64	static

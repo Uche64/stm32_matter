@@ -1,0 +1,2 @@
+../Middlewares/Third_Party/mbedtls/programs/test/zeroize.c:26:6:usage	8	static
+../Middlewares/Third_Party/mbedtls/programs/test/zeroize.c:35:5:main	1048	static

@@ -1,0 +1,8 @@
+../Middlewares/Third_Party/mbedtls/library/pkparse.c:471:12:pk_get_pk_alg	8
+../Middlewares/Third_Party/mbedtls/library/pkparse.c:389:12:pk_use_ecparams	3
+../Middlewares/Third_Party/mbedtls/library/pkparse.c:604:12:pk_parse_key_sec1_der	22
+../Middlewares/Third_Party/mbedtls/library/pkparse.c:742:12:pk_parse_key_pkcs8_unencrypted_der	12
+../Middlewares/Third_Party/mbedtls/library/pkparse.c:865:29:mbedtls_pk_parse_key_pkcs8_encrypted_der.isra	5
+../Middlewares/Third_Party/mbedtls/library/pkparse.c:517:5:mbedtls_pk_parse_subpubkey	10
+../Middlewares/Third_Party/mbedtls/library/pkparse.c:973:5:mbedtls_pk_parse_key	24
+../Middlewares/Third_Party/mbedtls/library/pkparse.c:1180:5:mbedtls_pk_parse_public_key	5

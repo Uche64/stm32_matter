@@ -1,0 +1,7 @@
+../Middlewares/Third_Party/mbedtls/library/cmac.c:55:12:cmac_multiply_by_u.part.0	16	static,ignoring_inline_asm
+../Middlewares/Third_Party/mbedtls/library/cmac.c:156:5:mbedtls_cipher_cmac_starts	16	static
+../Middlewares/Third_Party/mbedtls/library/cmac.c:198:5:mbedtls_cipher_cmac_update	56	static
+../Middlewares/Third_Party/mbedtls/library/cmac.c:268:5:mbedtls_cipher_cmac_finish	104	static
+../Middlewares/Third_Party/mbedtls/library/cmac.c:327:5:mbedtls_cipher_cmac_reset	16	static
+../Middlewares/Third_Party/mbedtls/library/cmac.c:347:5:mbedtls_cipher_cmac	96	static
+../Middlewares/Third_Party/mbedtls/library/cmac.c:387:5:mbedtls_aes_cmac_prf_128	72	static

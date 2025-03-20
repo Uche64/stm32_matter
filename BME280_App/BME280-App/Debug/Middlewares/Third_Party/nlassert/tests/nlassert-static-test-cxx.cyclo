@@ -1,0 +1,2 @@
+../Middlewares/Third_Party/nlassert/tests/nlassert-static-test-cxx.cpp:50:13:void TestStatic(nlTestSuite*, void*)	1
+../Middlewares/Third_Party/nlassert/tests/nlassert-static-test-cxx.cpp:62:5:int main()	1

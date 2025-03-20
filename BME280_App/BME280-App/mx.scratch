@@ -1,0 +1,646 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<ScratchFile FileVersion="3.0">
+  <FileVersion>3.0</FileVersion>
+  <Workspace>
+    <WorkspaceType>Single-project</WorkspaceType>
+    <WorkspacePath>C:\Users\Windows\Downloads\new.x-cube-matter-\Projects\STM32WB5MM-DK\Applications\Matter\BME280-App\STM32CubeIDE\</WorkspacePath>
+    <underRoot>false</underRoot>
+    <TrustZone>0</TrustZone>
+    <HAL_Driver>C:\Users\Windows\STM32Cube\Repository\STM32Cube_FW_WB_V1.21.0</HAL_Driver>
+    <CMSIS>Drivers/CMSIS</CMSIS>
+    <Toolchain>STM32CubeIDE</Toolchain>
+    <IocFile>BME280-App.ioc</IocFile>
+    <Project>
+              
+      <ProjectName>BME280-App</ProjectName>
+           
+      <ProjectNature>CPP</ProjectNature>
+       
+      <Secure/>
+            
+      <filestoremove>                           </filestoremove>
+          
+      <configs>
+        <config>
+              
+          <name>BME280-App</name>
+          	 
+          <mainSourceRepo>Core</mainSourceRepo>
+             
+          <sourceStructure>Advanced</sourceStructure>
+           
+          <device>STM32WB5MMGHx</device>
+          		     
+          <cpucore>ARM Cortex-M4</cpucore>
+                  
+          <fpu>SP</fpu>
+                
+          <memories>
+                       
+            <memory access="xrw" name="RAM" size="195584" start="0x20000008"/>
+                    
+            <memory access="rx" name="FLASH" size="523264" start="0x08000000"/>
+                    
+            <memory access="xrw" name="RAM_SHARED" size="9216" start="0x20030000"/>
+                
+          </memories>
+              
+          <startup>C:\Users\Windows\Downloads\new.x-cube-matter-\Projects\Drivers\CMSIS\Device\ST\STM32WBxx\Source\Templates\gcc\startup_stm32wb5mxx_cm4.s</startup>
+                
+          <LinkSettings>
+            	
+            <LinkAdditionalLibs>	</LinkAdditionalLibs>
+          </LinkSettings>
+              
+          <heapSize>0x400</heapSize>
+              
+          <stackSize>0x1000</stackSize>
+                  
+          <cpuclock>64</cpuclock>
+                  
+          <board>custom</board>
+              
+          <debugprobe>swd</debugprobe>
+              
+          <optimization/>
+              
+          <Aincludes>
+                                         
+            <include>Core\Inc</include>
+                                         
+            <include>STM32_WPAN\App</include>
+                                                  
+            <include>..\Drivers\STM32WBxx_HAL_Driver\Inc</include>
+                                                  
+            <include>..\Drivers\STM32WBxx_HAL_Driver\Inc\Legacy</include>
+                                                  
+            <include>..\Utilities\lpm\tiny_lpm</include>
+                                                  
+            <include>..\Middlewares\Third_Party\FreeRTOS\Source\include</include>
+                                                  
+            <include>..\Middlewares\Third_Party\FreeRTOS\Source\CMSIS_RTOS_V2</include>
+                                                  
+            <include>..\Middlewares\Third_Party\FreeRTOS\Source\portable\GCC\ARM_CM4F</include>
+                                                  
+            <include>..\Middlewares\ST\STM32_WPAN</include>
+                                                  
+            <include>..\Middlewares\ST\STM32_WPAN\interface\patterns\ble_thread</include>
+                                                  
+            <include>..\Middlewares\ST\STM32_WPAN\interface\patterns\ble_thread\tl</include>
+                                                  
+            <include>..\Middlewares\ST\STM32_WPAN\interface\patterns\ble_thread\shci</include>
+                                                  
+            <include>..\Middlewares\ST\STM32_WPAN\utilities</include>
+                                                  
+            <include>..\Drivers\CMSIS\Device\ST\STM32WBxx\Include</include>
+                    
+          </Aincludes>
+              
+          <Adefines>        </Adefines>
+                
+          <Cdefines>
+                    
+            <define>OPENTHREAD_CONFIG_FILE=&lt;openthread_api_config_ftd.h&gt;</define>
+                    
+            <define>THREAD_WB</define>
+                    
+            <define>USE_HAL_DRIVER</define>
+                    
+            <define>STM32WB5Mxx</define>
+                    
+          </Cdefines>
+              
+          <Ldefines>        </Ldefines>
+                  
+          <Cincludes>
+            		        
+            <include>Core\Inc</include>
+                    
+            <include>STM32_WPAN\App</include>
+                    
+            <include>..\Drivers\STM32WBxx_HAL_Driver\Inc</include>
+                    
+            <include>..\Drivers\STM32WBxx_HAL_Driver\Inc\Legacy</include>
+                    
+            <include>..\Utilities\lpm\tiny_lpm</include>
+                    
+            <include>..\Middlewares\Third_Party\FreeRTOS\Source\include</include>
+                    
+            <include>..\Middlewares\Third_Party\FreeRTOS\Source\CMSIS_RTOS_V2</include>
+                    
+            <include>..\Middlewares\Third_Party\FreeRTOS\Source\portable\GCC\ARM_CM4F</include>
+                    
+            <include>..\Middlewares\ST\STM32_WPAN</include>
+                    
+            <include>..\Middlewares\ST\STM32_WPAN\interface\patterns\ble_thread</include>
+                    
+            <include>..\Middlewares\ST\STM32_WPAN\interface\patterns\ble_thread\tl</include>
+                    
+            <include>..\Middlewares\ST\STM32_WPAN\interface\patterns\ble_thread\shci</include>
+                    
+            <include>..\Middlewares\ST\STM32_WPAN\utilities</include>
+                    
+            <include>..\Drivers\CMSIS\Device\ST\STM32WBxx\Include</include>
+                    
+          </Cincludes>
+              
+          <definestoremove>
+                    
+            <Adefines>            </Adefines>
+                    
+            <Cdefines>
+                                  
+              <define>USE_FULL_LL_DRIVER</define>
+                                  
+              <define>USE_FULL_ASSERT=1U</define>
+                          
+            </Cdefines>
+                     
+            <Ldefines>            </Ldefines>
+                     
+          </definestoremove>
+              
+          <inctoremove>
+                    
+            <Aincludes>
+                          
+              <include/>
+                          
+            </Aincludes>
+                    
+            <Cincludes>            </Cincludes>
+                    
+          </inctoremove>
+                 
+        </config>
+                
+      </configs>
+       
+      <copyAsReference>true</copyAsReference>
+       
+      <Groups>
+            
+        <group>
+                  
+          <name>Middlewares</name>
+           		        
+          <group>
+                        
+            <name>FreeRTOS</name>
+                        
+            <file>
+                              
+              <name>..\..\..\..\..\Middlewares\Third_Party\FreeRTOS\Source\croutine.c</name>
+                              
+            </file>
+                        
+            <file>
+                              
+              <name>..\..\..\..\..\Middlewares\Third_Party\FreeRTOS\Source\event_groups.c</name>
+                              
+            </file>
+                        
+            <file>
+                              
+              <name>..\..\..\..\..\Middlewares\Third_Party\FreeRTOS\Source\list.c</name>
+                              
+            </file>
+                        
+            <file>
+                              
+              <name>..\..\..\..\..\Middlewares\Third_Party\FreeRTOS\Source\queue.c</name>
+                              
+            </file>
+                        
+            <file>
+                              
+              <name>..\..\..\..\..\Middlewares\Third_Party\FreeRTOS\Source\stream_buffer.c</name>
+                              
+            </file>
+                        
+            <file>
+                              
+              <name>..\..\..\..\..\Middlewares\Third_Party\FreeRTOS\Source\tasks.c</name>
+                              
+            </file>
+                        
+            <file>
+                              
+              <name>..\..\..\..\..\Middlewares\Third_Party\FreeRTOS\Source\timers.c</name>
+                              
+            </file>
+                        
+            <file>
+                              
+              <name>..\..\..\..\..\Middlewares\Third_Party\FreeRTOS\Source\CMSIS_RTOS_V2\cmsis_os2.c</name>
+                              
+            </file>
+                        
+            <file>
+                              
+              <name>..\..\..\..\..\Middlewares\Third_Party\FreeRTOS\Source\portable\MemMang\heap_4.c</name>
+                              
+            </file>
+                        
+            <file>
+                              
+              <name>..\..\..\..\..\Middlewares\Third_Party\FreeRTOS\Source\portable\GCC\ARM_CM4F\port.c</name>
+                              
+            </file>
+                        
+          </group>
+                  
+          <group>
+                        
+            <name>STM32_WPAN</name>
+                        
+            <file>
+                              
+              <name>..\..\..\..\..\Middlewares\ST\STM32_WPAN\interface\patterns\ble_thread\tl\tl_mbox.c</name>
+                              
+            </file>
+                        
+            <file>
+                              
+              <name>..\..\..\..\..\Middlewares\ST\STM32_WPAN\interface\patterns\ble_thread\shci\shci.c</name>
+                              
+            </file>
+                        
+            <file>
+                              
+              <name>..\..\..\..\..\Middlewares\ST\STM32_WPAN\utilities\dbg_trace.c</name>
+                              
+            </file>
+                        
+            <file>
+                              
+              <name>..\..\..\..\..\Middlewares\ST\STM32_WPAN\utilities\otp.c</name>
+                              
+            </file>
+                        
+            <file>
+                              
+              <name>..\..\..\..\..\Middlewares\ST\STM32_WPAN\utilities\stm_list.c</name>
+                              
+            </file>
+                        
+            <file>
+                              
+              <name>..\..\..\..\..\Middlewares\ST\STM32_WPAN\utilities\stm_queue.c</name>
+                              
+            </file>
+                        
+            <file>
+                              
+              <name>..\..\..\..\..\Middlewares\ST\STM32_WPAN\utilities\advanced_memory_manager.c</name>
+                              
+            </file>
+                        
+            <file>
+                              
+              <name>..\..\..\..\..\Middlewares\ST\STM32_WPAN\utilities\stm32_mm.c</name>
+                              
+            </file>
+                        
+            <file>
+                              
+              <name>..\..\..\..\..\Middlewares\ST\STM32_WPAN\interface\patterns\ble_thread\tl\tl_thread_hci.c</name>
+                              
+            </file>
+                        
+            <file>
+                              
+              <name>..\..\..\..\..\Middlewares\ST\STM32_WPAN\interface\patterns\ble_thread\tl\shci_tl.c</name>
+                              
+            </file>
+                        
+            <file>
+                              
+              <name>..\..\..\..\..\Middlewares\ST\STM32_WPAN\interface\patterns\ble_thread\tl\shci_tl_if.c</name>
+                              
+            </file>
+                        
+          </group>
+                  
+        </group>
+             
+        <group>
+                  
+          <name>Drivers</name>
+                                       
+          <group>
+                        
+            <name>STM32WBxx_HAL_Driver</name>
+                        
+            <file>
+                              
+              <name>..\..\..\..\..\Drivers\STM32WBxx_HAL_Driver\Src\stm32wbxx_hal_tim.c</name>
+                              
+            </file>
+                        
+            <file>
+                              
+              <name>..\..\..\..\..\Drivers\STM32WBxx_HAL_Driver\Src\stm32wbxx_hal_tim_ex.c</name>
+                              
+            </file>
+                        
+            <file>
+                              
+              <name>..\..\..\..\..\Drivers\STM32WBxx_HAL_Driver\Src\stm32wbxx_hal_rcc.c</name>
+                              
+            </file>
+                        
+            <file>
+                              
+              <name>..\..\..\..\..\Drivers\STM32WBxx_HAL_Driver\Src\stm32wbxx_ll_rcc.c</name>
+                              
+            </file>
+                        
+            <file>
+                              
+              <name>..\..\..\..\..\Drivers\STM32WBxx_HAL_Driver\Src\stm32wbxx_hal_rcc_ex.c</name>
+                              
+            </file>
+                        
+            <file>
+                              
+              <name>..\..\..\..\..\Drivers\STM32WBxx_HAL_Driver\Src\stm32wbxx_hal_flash.c</name>
+                              
+            </file>
+                        
+            <file>
+                              
+              <name>..\..\..\..\..\Drivers\STM32WBxx_HAL_Driver\Src\stm32wbxx_hal_flash_ex.c</name>
+                              
+            </file>
+                        
+            <file>
+                              
+              <name>..\..\..\..\..\Drivers\STM32WBxx_HAL_Driver\Src\stm32wbxx_hal_gpio.c</name>
+                              
+            </file>
+                        
+            <file>
+                              
+              <name>..\..\..\..\..\Drivers\STM32WBxx_HAL_Driver\Src\stm32wbxx_hal_hsem.c</name>
+                              
+            </file>
+                        
+            <file>
+                              
+              <name>..\..\..\..\..\Drivers\STM32WBxx_HAL_Driver\Src\stm32wbxx_hal_dma.c</name>
+                              
+            </file>
+                        
+            <file>
+                              
+              <name>..\..\..\..\..\Drivers\STM32WBxx_HAL_Driver\Src\stm32wbxx_hal_dma_ex.c</name>
+                              
+            </file>
+                        
+            <file>
+                              
+              <name>..\..\..\..\..\Drivers\STM32WBxx_HAL_Driver\Src\stm32wbxx_hal_pwr.c</name>
+                              
+            </file>
+                        
+            <file>
+                              
+              <name>..\..\..\..\..\Drivers\STM32WBxx_HAL_Driver\Src\stm32wbxx_hal_pwr_ex.c</name>
+                              
+            </file>
+                        
+            <file>
+                              
+              <name>..\..\..\..\..\Drivers\STM32WBxx_HAL_Driver\Src\stm32wbxx_hal_cortex.c</name>
+                              
+            </file>
+                        
+            <file>
+                              
+              <name>..\..\..\..\..\Drivers\STM32WBxx_HAL_Driver\Src\stm32wbxx_hal.c</name>
+                              
+            </file>
+                        
+            <file>
+                              
+              <name>..\..\..\..\..\Drivers\STM32WBxx_HAL_Driver\Src\stm32wbxx_hal_exti.c</name>
+                              
+            </file>
+                        
+            <file>
+                              
+              <name>..\..\..\..\..\Drivers\STM32WBxx_HAL_Driver\Src\stm32wbxx_hal_i2c.c</name>
+                              
+            </file>
+                        
+            <file>
+                              
+              <name>..\..\..\..\..\Drivers\STM32WBxx_HAL_Driver\Src\stm32wbxx_hal_i2c_ex.c</name>
+                              
+            </file>
+                        
+            <file>
+                              
+              <name>..\..\..\..\..\Drivers\STM32WBxx_HAL_Driver\Src\stm32wbxx_hal_ipcc.c</name>
+                              
+            </file>
+                        
+            <file>
+                              
+              <name>..\..\..\..\..\Drivers\STM32WBxx_HAL_Driver\Src\stm32wbxx_hal_iwdg.c</name>
+                              
+            </file>
+                        
+            <file>
+                              
+              <name>..\..\..\..\..\Drivers\STM32WBxx_HAL_Driver\Src\stm32wbxx_hal_uart.c</name>
+                              
+            </file>
+                        
+            <file>
+                              
+              <name>..\..\..\..\..\Drivers\STM32WBxx_HAL_Driver\Src\stm32wbxx_hal_uart_ex.c</name>
+                              
+            </file>
+                        
+            <file>
+                              
+              <name>..\..\..\..\..\Drivers\STM32WBxx_HAL_Driver\Src\stm32wbxx_hal_qspi.c</name>
+                              
+            </file>
+                        
+            <file>
+                              
+              <name>..\..\..\..\..\Drivers\STM32WBxx_HAL_Driver\Src\stm32wbxx_hal_rng.c</name>
+                              
+            </file>
+                        
+            <file>
+                              
+              <name>..\..\..\..\..\Drivers\STM32WBxx_HAL_Driver\Src\stm32wbxx_hal_rtc.c</name>
+                              
+            </file>
+                        
+            <file>
+                              
+              <name>..\..\..\..\..\Drivers\STM32WBxx_HAL_Driver\Src\stm32wbxx_hal_rtc_ex.c</name>
+                              
+            </file>
+                        
+            <file>
+                              
+              <name>..\..\..\..\..\Drivers\STM32WBxx_HAL_Driver\Src\stm32wbxx_hal_spi.c</name>
+                              
+            </file>
+                        
+            <file>
+                              
+              <name>..\..\..\..\..\Drivers\STM32WBxx_HAL_Driver\Src\stm32wbxx_hal_spi_ex.c</name>
+                              
+            </file>
+                        
+          </group>
+                  
+          <group>
+                        
+            <name>CMSIS</name>
+                            
+            <file>
+                                          
+              <name>Core/Src/system_stm32wbxx.c</name>
+                                          
+            </file>
+                                    
+          </group>
+                  
+        </group>
+               
+        <group>
+                      
+          <name>Utilities</name>
+                  
+          <file>
+                        
+            <name>..\..\..\..\..\Utilities\lpm\tiny_lpm\stm32_lpm.c</name>
+                        
+          </file>
+                  
+        </group>
+            
+        <group>
+                  
+          <name>Application</name>
+                  
+          <group>
+                        
+            <name>User</name>
+                              
+            <group>
+                              
+              <name>Core</name>
+                                
+              <file>
+                                    
+                <name>Core\Src\main.c</name>
+                                    
+              </file>
+                              
+              <file>
+                                    
+                <name>Core\Src\app_freertos.c</name>
+                                    
+              </file>
+                              
+              <file>
+                                    
+                <name>Core\Src\app_entry.c</name>
+                                    
+              </file>
+                              
+              <file>
+                                    
+                <name>Core\Src\hw_timerserver.c</name>
+                                    
+              </file>
+                              
+              <file>
+                                    
+                <name>Core\Src\hw_uart.c</name>
+                                    
+              </file>
+                              
+              <file>
+                                    
+                <name>Core\Src\stm32_lpm_if.c</name>
+                                    
+              </file>
+                              
+              <file>
+                                    
+                <name>Core\Src\freertos_port.c</name>
+                                    
+              </file>
+                              
+              <file>
+                                    
+                <name>Core\Src\stm_logging.c</name>
+                                    
+              </file>
+                              
+              <file>
+                                    
+                <name>Core\Src\stm32wbxx_it.c</name>
+                                    
+              </file>
+                              
+              <file>
+                                    
+                <name>Core\Src\stm32wbxx_hal_msp.c</name>
+                                    
+              </file>
+                              
+              <file>
+                                    
+                <name>Core\Src\stm32wbxx_hal_timebase_tim.c</name>
+                                    
+              </file>
+                              
+            </group>
+                              
+            <group>
+                   
+              <name>STM32_WPAN</name>
+              <group>
+                     
+                <name>App</name>
+                        
+                <file>
+                              
+                  <name>STM32_WPAN\App\app_thread.c</name>
+                          
+                </file>
+                    
+              </group>
+              <group>
+                     
+                <name>Target</name>
+                        
+                <file>
+                              
+                  <name>STM32_WPAN\Target\hw_ipcc.c</name>
+                          
+                </file>
+                    
+              </group>
+                  
+            </group>
+                        
+          </group>
+                   
+        </group>
+                
+      </Groups>
+    </Project>
+  </Workspace>
+</ScratchFile>

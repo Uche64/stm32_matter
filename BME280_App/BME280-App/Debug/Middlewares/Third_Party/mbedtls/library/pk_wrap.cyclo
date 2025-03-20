@@ -1,0 +1,10 @@
+../Middlewares/Third_Party/mbedtls/library/pk_wrap.c:518:12:eckey_can_do	1
+../Middlewares/Third_Party/mbedtls/library/pk_wrap.c:525:15:eckey_get_bitlen	1
+../Middlewares/Third_Party/mbedtls/library/pk_wrap.c:1099:13:eckey_debug	1
+../Middlewares/Third_Party/mbedtls/library/pk_wrap.c:1150:12:eckeydh_can_do	1
+../Middlewares/Third_Party/mbedtls/library/pk_wrap.c:1181:12:ecdsa_can_do	1
+../Middlewares/Third_Party/mbedtls/library/pk_wrap.c:1092:13:eckey_free_wrap	1
+../Middlewares/Third_Party/mbedtls/library/pk_wrap.c:1081:14:eckey_alloc_wrap	2
+../Middlewares/Third_Party/mbedtls/library/pk_wrap.c:1028:12:eckey_check_pair_wrap	1
+../Middlewares/Third_Party/mbedtls/library/pk_wrap.c:809:12:ecdsa_sign_wrap	1
+../Middlewares/Third_Party/mbedtls/library/pk_wrap.c:671:12:ecdsa_verify_wrap	2

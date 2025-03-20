@@ -1,0 +1,7 @@
+../Middlewares/Third_Party/mbedtls/library/x509_create.c:119:12:hex_to_int	0	static
+../Middlewares/Third_Party/mbedtls/library/x509_create.c:126:12:hexpair_to_int	8	static
+../Middlewares/Third_Party/mbedtls/library/x509_create.c:281:5:mbedtls_x509_string_to_names	336	static
+../Middlewares/Third_Party/mbedtls/library/x509_create.c:380:5:mbedtls_x509_set_extension	24	static
+../Middlewares/Third_Party/mbedtls/library/x509_create.c:446:5:mbedtls_x509_write_names	40	static
+../Middlewares/Third_Party/mbedtls/library/x509_create.c:465:5:mbedtls_x509_write_sig	48	static
+../Middlewares/Third_Party/mbedtls/library/x509_create.c:548:5:mbedtls_x509_write_extensions	40	static

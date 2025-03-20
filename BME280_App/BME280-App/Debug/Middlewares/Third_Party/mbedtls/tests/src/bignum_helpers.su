@@ -1,0 +1,2 @@
+../Middlewares/Third_Party/mbedtls/tests/src/bignum_helpers.c:29:5:mbedtls_test_read_mpi_core	32	static
+../Middlewares/Third_Party/mbedtls/tests/src/bignum_helpers.c:116:5:mbedtls_test_read_mpi	16	static

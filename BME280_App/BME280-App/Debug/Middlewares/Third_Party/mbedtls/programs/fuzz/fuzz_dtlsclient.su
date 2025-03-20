@@ -1,0 +1,1 @@
+../Middlewares/Third_Party/mbedtls/programs/fuzz/fuzz_dtlsclient.c:27:5:LLVMFuzzerTestOneInput	0	static

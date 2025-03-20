@@ -1,0 +1,16 @@
+../Middlewares/Third_Party/mbedtls/library/ecdsa.c:207:12:derive_mpi	24	static
+../Middlewares/Third_Party/mbedtls/library/ecdsa.c:229:5:mbedtls_ecdsa_can_do	0	static
+../Middlewares/Third_Party/mbedtls/library/ecdsa.c:247:5:mbedtls_ecdsa_sign_restartable	112	static
+../Middlewares/Third_Party/mbedtls/library/ecdsa.c:384:5:mbedtls_ecdsa_sign	48	static
+../Middlewares/Third_Party/mbedtls/library/ecdsa.c:401:5:mbedtls_ecdsa_sign_det_restartable	224	static
+../Middlewares/Third_Party/mbedtls/library/ecdsa.c:474:5:mbedtls_ecdsa_sign_det_ext	32	static
+../Middlewares/Third_Party/mbedtls/library/ecdsa.c:492:5:mbedtls_ecdsa_verify_restartable	104	static
+../Middlewares/Third_Party/mbedtls/library/ecdsa.c:622:5:mbedtls_ecdsa_verify	24	static
+../Middlewares/Third_Party/mbedtls/library/ecdsa.c:665:5:mbedtls_ecdsa_write_signature_restartable	144	static
+../Middlewares/Third_Party/mbedtls/library/ecdsa.c:714:5:mbedtls_ecdsa_write_signature	32	static
+../Middlewares/Third_Party/mbedtls/library/ecdsa.c:740:5:mbedtls_ecdsa_read_signature_restartable	72	static
+../Middlewares/Third_Party/mbedtls/library/ecdsa.c:729:5:mbedtls_ecdsa_read_signature	16	static
+../Middlewares/Third_Party/mbedtls/library/ecdsa.c:802:5:mbedtls_ecdsa_genkey	24	static
+../Middlewares/Third_Party/mbedtls/library/ecdsa.c:834:6:mbedtls_ecdsa_init	0	static
+../Middlewares/Third_Party/mbedtls/library/ecdsa.c:842:6:mbedtls_ecdsa_free	0	static
+../Middlewares/Third_Party/mbedtls/library/ecdsa.c:819:5:mbedtls_ecdsa_from_keypair	16	static

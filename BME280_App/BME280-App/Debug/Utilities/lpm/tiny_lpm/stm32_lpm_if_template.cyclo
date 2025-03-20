@@ -1,0 +1,6 @@
+../Utilities/lpm/tiny_lpm/stm32_lpm_if_template.c:78:6:PWR_EnterOffMode	1
+../Utilities/lpm/tiny_lpm/stm32_lpm_if_template.c:113:6:PWR_ExitSleepMode	1
+../Utilities/lpm/tiny_lpm/stm32_lpm_if_template.c:85:6:PWR_ExitOffMode	1
+../Utilities/lpm/tiny_lpm/stm32_lpm_if_template.c:92:6:PWR_EnterStopMode	1
+../Utilities/lpm/tiny_lpm/stm32_lpm_if_template.c:99:6:PWR_ExitStopMode	1
+../Utilities/lpm/tiny_lpm/stm32_lpm_if_template.c:106:6:PWR_EnterSleepMode	1

@@ -1,0 +1,6 @@
+../Middlewares/Third_Party/mbedtls/programs/fuzz/common.c:16:6:dummy_init	0	static
+../Middlewares/Third_Party/mbedtls/programs/fuzz/common.c:25:5:dummy_send	0	static
+../Middlewares/Third_Party/mbedtls/programs/fuzz/common.c:38:5:fuzz_recv	16	static
+../Middlewares/Third_Party/mbedtls/programs/fuzz/common.c:59:5:dummy_random	16	static
+../Middlewares/Third_Party/mbedtls/programs/fuzz/common.c:84:5:dummy_entropy	16	static
+../Middlewares/Third_Party/mbedtls/programs/fuzz/common.c:99:5:fuzz_recv_timeout	0	static

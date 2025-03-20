@@ -1,0 +1,4 @@
+../Middlewares/Third_Party/mbedtls/library/psa_util.c:390:12:convert_raw_to_der_single_int	24	static
+../Middlewares/Third_Party/mbedtls/library/psa_util.c:504:12:convert_der_to_raw_single_int	32	static
+../Middlewares/Third_Party/mbedtls/library/psa_util.c:433:5:mbedtls_ecdsa_raw_to_der	40	static
+../Middlewares/Third_Party/mbedtls/library/psa_util.c:550:5:mbedtls_ecdsa_der_to_raw	48	static

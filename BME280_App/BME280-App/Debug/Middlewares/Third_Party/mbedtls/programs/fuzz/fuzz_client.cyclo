@@ -1,0 +1,1 @@
+../Middlewares/Third_Party/mbedtls/programs/fuzz/fuzz_client.c:33:5:LLVMFuzzerTestOneInput	14

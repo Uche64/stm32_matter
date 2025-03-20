@@ -1,0 +1,8 @@
+../Middlewares/Third_Party/nlio/tests/nlbyteorder-test-cxx.cpp:35:13:void CheckPreprocessorDefinitions(nlTestSuite*, void*)	0	static
+../Middlewares/Third_Party/nlio/tests/nlbyteorder-test-cxx.cpp:43:13:void CheckEnumerations(nlTestSuite*, void*)	0	static
+../Middlewares/Third_Party/nlio/tests/nlbyteorder-test-cxx.cpp:50:13:void CheckByteOrder(nlTestSuite*, void*)	0	static
+../Middlewares/Third_Party/nlio/tests/nlbyteorder-test-cxx.cpp:95:13:void CheckSwapByValue(nlTestSuite*, void*)	0	static
+../Middlewares/Third_Party/nlio/tests/nlbyteorder-test-cxx.cpp:79:13:void CheckInPlaceInlines(nlTestSuite*, void*)	0	static
+../Middlewares/Third_Party/nlio/tests/nlbyteorder-test-cxx.cpp:57:13:void CheckConstantMacros(nlTestSuite*, void*)	0	static
+../Middlewares/Third_Party/nlio/tests/nlbyteorder-test-cxx.cpp:70:13:void CheckValueInlines(nlTestSuite*, void*)	0	static
+../Middlewares/Third_Party/nlio/tests/nlbyteorder-test-cxx.cpp:184:5:int main()	56	static

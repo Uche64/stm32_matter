@@ -1,0 +1,10 @@
+../Middlewares/Third_Party/mbedtls/library/ssl_ciphersuites.c:1796:12:mbedtls_ssl_list_ciphersuites	0	static
+../Middlewares/Third_Party/mbedtls/library/ssl_ciphersuites.c:1842:34:mbedtls_ssl_ciphersuite_from_string	16	static
+../Middlewares/Third_Party/mbedtls/library/ssl_ciphersuites.c:1862:34:mbedtls_ssl_ciphersuite_from_id	0	static
+../Middlewares/Third_Party/mbedtls/library/ssl_ciphersuites.c:1877:13:mbedtls_ssl_get_ciphersuite_name	8	static
+../Middlewares/Third_Party/mbedtls/library/ssl_ciphersuites.c:1890:5:mbedtls_ssl_get_ciphersuite_id	8	static
+../Middlewares/Third_Party/mbedtls/library/ssl_ciphersuites.c:1903:8:mbedtls_ssl_ciphersuite_get_cipher_key_bitlen	8	static
+../Middlewares/Third_Party/mbedtls/library/ssl_ciphersuites.c:1929:19:mbedtls_ssl_get_ciphersuite_sig_pk_alg	0	static
+../Middlewares/Third_Party/mbedtls/library/ssl_ciphersuites.c:1995:19:mbedtls_ssl_get_ciphersuite_sig_alg	0	static
+../Middlewares/Third_Party/mbedtls/library/ssl_ciphersuites.c:2015:5:mbedtls_ssl_ciphersuite_uses_ec	0	static
+../Middlewares/Third_Party/mbedtls/library/ssl_ciphersuites.c:2035:5:mbedtls_ssl_ciphersuite_uses_psk	0	static
