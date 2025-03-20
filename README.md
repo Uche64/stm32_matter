@@ -11,9 +11,9 @@ This repository contains multiple implementations of **BME280 sensor integration
 
 ### 2️. **RTOS-Based BME280 Sensor App**
 - Uses **FreeRTOS** to manage **3 separate tasks**:
-  - **Temperature Task** (reads every X ms)
-  - **Pressure Task** (reads every X ms)
-  - **Humidity Task** (reads every X ms)
+  - **Temperature Task** (Priority = Normal)
+  - **Pressure Task** (Priority = Below Normal)
+  - **Humidity Task** (Priority = Low)
 - Data can be processed and sent via UART.
 
 ### 3️. **Matter over Thread BME280 App**
