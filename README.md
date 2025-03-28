@@ -32,7 +32,7 @@ This repository contains multiple implementations of **BME280 sensor integration
 
 #
 ## Additional Documentation
-For a **step-by-step guide**, please look at the **[full project documentation](BME280_App/BME280-App/Documentation.md)** in this repository.
+For a **step-by-step guide**, please look at the **[full project documentation](Matter.pdf)** in this repository.
 
 ## License
 This project is licensed under **STMicroelectronics License**. See [LICENSE](LICENSE) for details.
